@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NYC Metro vs. Upstate: Fewer Followers, More Frequent Posts</title>
+<style>
+  :root {
+    --ink: #1C1C1A;
+    --muted: #57564F;
+    --faint: #8A8880;
+    --line: #E3E1DA;
+    --bg: transparent;
+    --accent: #6797d6;
+    --accent-2: #6797d6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 28px 24px 36px;
+    background: var(--bg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  h1 {
+    font-size: 18px;
+    font-weight: 650;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0 0 22px;
+    line-height: 1.5;
+    max-width: 58ch;
+  }
+  .chart-row {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .chart-box { flex: 1 1 280px; min-width: 260px; }
+  .chart-box h2 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+    margin: 0 0 6px;
+  }
+  .bar-hitzone { cursor: pointer; }
+  .bar-rect { transition: opacity 0.12s ease; }
+  .bar-group:hover .bar-rect { opacity: 0.78; }
+  #tooltip {
+    position: fixed;
+    pointer-events: none;
+    background: var(--ink);
+    color: #FAFAF7;
+    font-size: 12.5px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    line-height: 1.4;
+    max-width: 240px;
+    opacity: 0;
+    transform: translate(-50%, -100%);
+    transition: opacity 0.1s ease;
+    z-index: 10;
+    white-space: nowrap;
+  }
+  .foot {
+    margin-top: 26px;
+    font-size: 11.5px;
+    color: var(--faint);
+    border-top: 1px solid var(--line);
+    padding-top: 12px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>NYC Metro vs. Upstate: Fewer Followers, More Frequent Posts</h1>
+  <p class="subtitle">135 accounts with confirmed New York business addresses. Upstate shelters have a third of the median audience of NYC-area shelters, but post more consistently.</p>
+  <div class="chart-row">
+    <div class="chart-box"><h2>Median followers</h2><svg viewBox="0 0 320 380" width="100%" style="max-width:320px;font-family:inherit;">
+<line x1="56" y1="316.0" x2="296" y2="316.0" stroke="#E3E1DA" stroke-width="1"/><text x="46" y="320.0" text-anchor="end" font-size="11" fill="#8A8880" font-family="inherit">0.0</text><line x1="56" y1="244.5" x2="296" y2="244.5" stroke="#E3E1DA" stroke-width="1"/><text x="46" y="248.5" text-anchor="end" font-size="11" fill="#8A8880" font-family="inherit">1510.8</text><line x1="56" y1="173.0" x2="296" y2="173.0" stroke="#E3E1DA" stroke-width="1"/><text x="46" y="177.0" text-anchor="end" font-size="11" fill="#8A8880" font-family="inherit">3021.7</text><line x1="56" y1="101.5" x2="296" y2="101.5" stroke="#E3E1DA" stroke-width="1"/><text x="46" y="105.5" text-anchor="end" font-size="11" fill="#8A8880" font-family="inherit">4532.5</text><line x1="56" y1="30.0" x2="296" y2="30.0" stroke="#E3E1DA" stroke-width="1"/><text x="46" y="34.0" text-anchor="end" font-size="11" fill="#8A8880" font-family="inherit">6043.4</text>
+<line x1="56" y1="316" x2="296" y2="316" stroke="#B9B7AE" stroke-width="1.2"/>
+<text x="16" y="173.0" text-anchor="middle" font-size="11.5" fill="#57564F" transform="rotate(-90 16 173.0)">Median followers</text>
+<g class="bar-group" data-tooltip="NYC Metro: 5,122 — n=58"><rect x="81.2" y="73.6" width="69.6" height="242.4" rx="3" fill="#6797d6" class="bar-rect"/><rect x="81.2" y="30" width="69.6" height="286" fill="transparent" class="bar-hitzone"/><text x="116.0" y="65.6" text-anchor="middle" font-size="12.5" fill="#1C1C1A" font-weight="600" class="bar-value">5,122</text><text x="116.0" y="338.0" text-anchor="middle" font-size="11.5" fill="#57564F">NYC Metro</text><text x="116.0" y="354.0" text-anchor="middle" font-size="10.5" fill="#8A8880">n=58</text></g><g class="bar-group" data-tooltip="Upstate NY: 1,923 — n=77"><rect x="201.2" y="225.0" width="69.6" height="91.0" rx="3" fill="#6797d6" class="bar-rect"/><rect x="201.2" y="30" width="69.6" height="286" fill="transparent" class="bar-hitzone"/><text x="236.0" y="217.0" text-anchor="middle" font-size="12.5" fill="#1C1C1A" font-weight="600" class="bar-value">1,923</text><text x="236.0" y="338.0" text-anchor="middle" font-size="11.5" fill="#57564F">Upstate NY</text><text x="236.0" y="354.0" text-anchor="middle" font-size="10.5" fill="#8A8880">n=77</text></g>
+</svg></div>
+<div class="chart-box"><h2>Median posting frequency</h2><svg viewBox="0 0 320 380" width="100%" style="max-width:320px;font-family:inherit;">
+<line x1="56" y1="316.0" x2="296" y2="316.0" stroke="#E3E1DA" stroke-width="1"/><text x="46" y="320.0" text-anchor="end" font-size="11" fill="#8A8880" font-family="inherit">0.0</text><line x1="56" y1="244.5" x2="296" y2="244.5" stroke="#E3E1DA" stroke-width="1"/><text x="46" y="248.5" text-anchor="end" font-size="11" fill="#8A8880" font-family="inherit">1.2</text><line x1="56" y1="173.0" x2="296" y2="173.0" stroke="#E3E1DA" stroke-width="1"/><text x="46" y="177.0" text-anchor="end" font-size="11" fill="#8A8880" font-family="inherit">2.4</text><line x1="56" y1="101.5" x2="296" y2="101.5" stroke="#E3E1DA" stroke-width="1"/><text x="46" y="105.5" text-anchor="end" font-size="11" fill="#8A8880" font-family="inherit">3.6</text><line x1="56" y1="30.0" x2="296" y2="30.0" stroke="#E3E1DA" stroke-width="1"/><text x="46" y="34.0" text-anchor="end" font-size="11" fill="#8A8880" font-family="inherit">4.8</text>
+<line x1="56" y1="316" x2="296" y2="316" stroke="#B9B7AE" stroke-width="1.2"/>
+<text x="16" y="173.0" text-anchor="middle" font-size="11.5" fill="#57564F" transform="rotate(-90 16 173.0)">Days between posts</text>
+<g class="bar-group" data-tooltip="NYC Metro: 4.04d — n=58"><rect x="81.2" y="73.6" width="69.6" height="242.4" rx="3" fill="#6797d6" class="bar-rect"/><rect x="81.2" y="30" width="69.6" height="286" fill="transparent" class="bar-hitzone"/><text x="116.0" y="65.6" text-anchor="middle" font-size="12.5" fill="#1C1C1A" font-weight="600" class="bar-value">4.04d</text><text x="116.0" y="338.0" text-anchor="middle" font-size="11.5" fill="#57564F">NYC Metro</text><text x="116.0" y="354.0" text-anchor="middle" font-size="10.5" fill="#8A8880">n=58</text></g><g class="bar-group" data-tooltip="Upstate NY: 3.08d — n=77"><rect x="201.2" y="131.2" width="69.6" height="184.8" rx="3" fill="#6797d6" class="bar-rect"/><rect x="201.2" y="30" width="69.6" height="286" fill="transparent" class="bar-hitzone"/><text x="236.0" y="123.2" text-anchor="middle" font-size="12.5" fill="#1C1C1A" font-weight="600" class="bar-value">3.08d</text><text x="236.0" y="338.0" text-anchor="middle" font-size="11.5" fill="#57564F">Upstate NY</text><text x="236.0" y="354.0" text-anchor="middle" font-size="10.5" fill="#8A8880">n=77</text></g>
+</svg></div>
+
+  </div>
+  <p class="foot">Source: Instagram profile scrape, June–July 2026, cross-referenced with Meta business address data. Region split at 41.3° latitude (NYC, Long Island, Westchester, lower Hudson Valley vs. points north/west).</p>
+</div>
+<div id="tooltip"></div>
+<script>
+  const tooltip = document.getElementById('tooltip');
+  document.querySelectorAll('.bar-group').forEach(g => {
+    g.addEventListener('mousemove', (e) => {
+      tooltip.textContent = g.getAttribute('data-tooltip');
+      tooltip.style.left = e.clientX + 'px';
+      tooltip.style.top = (e.clientY - 12) + 'px';
+      tooltip.style.opacity = '1';
+    });
+    g.addEventListener('mouseleave', () => {
+      tooltip.style.opacity = '0';
+    });
+  });
+</script>
+</body>
+</html>
