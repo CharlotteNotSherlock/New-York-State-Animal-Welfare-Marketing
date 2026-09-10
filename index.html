@@ -86,6 +86,16 @@
             padding-bottom: 1.2em;
         }
 
+        .chart-embed {
+            display: block;
+            width: min(1000px, calc(100vw - 40px));
+            max-width: none;
+            height: 580px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            border: none;
+        }
+
         code {
             font-family: 'Courier New', monospace;
             background: #fffbaf;
@@ -107,6 +117,7 @@
                 padding-right: 0.5em;
             }
         }
+        
     </style>
 </head>
 
@@ -119,38 +130,47 @@
         <div class="byline">
             <p>By &nbsp;<a href="https://github.com/CharlotteNotSherlock" target="_blank">Charlotte Zhao</a></p>
         </div>
-        <p>In the contemporary non-profit landscape, organic social media visibility is often romanticized as a democratic equalizer. The conventional growth marketing narrative suggests that any organization, regardless of budget, can achieve digital traction through sheer narrative power and posting consistency. However, when we apply algorithmic auditing to empirical data, this meritocratic illusion quickly falls apart.
+        <p>In the contemporary non-profit landscape, organic social media visibility is often romanticized as a democratic equalizer. The conventional growth marketing narrative suggests that any organization, regardless of budget, can achieve digital traction through sheer narrative power and posting consistency. However, when we apply algorithmic auditing to empirical data, this meritocratic illusion quickly falls apart. By scraping and cleaning the Instagram performance metrics of 570 animal welfare organizations across New York State, this study shows a reality that consistency is not a lifestyle choice but a capital expenditure.
 
 By scraping and cleaning the Instagram performance metrics of over 600 animal welfare organizations across New York State, this study shows a reality that consistency is not a lifestyle choice but a capital expenditure.</p>
-    
-        <p>When mapping institutional follower bases against posting intervals, the data reveals not a smooth gradient but a threshold effect. Organizations below roughly 500 followers post, on median, once every 11 days — nearly three times less often than the overall median of 5.13 days. But above that floor, consistency stops scaling with size: accounts in the 1,300-follower range and accounts in the 30,000-follower range post at statistically similar intervals (Pearson r = -0.07 across the full sample). Capital does not appear to buy a steadily improving posting rhythm; it appears to buy an exit from the bottom tier, and nothing more.</p>
-<iframe
-    src="charts/chart1_follower_tier.html"
-    height="520"
-    frameborder="0"
-    style="border: none;">
-</iframe>
-        <p> What capital does buy, unambiguously, is reach without proportional engagement. As follower count rises across quintiles, median engagement rate falls in an almost perfectly monotonic line — from 2.59% among the smallest accounts to 0.72% among the largest. The organizations with the thinnest audiences are also the ones whose audiences care the most, post for post. Scale in this ecosystem is a trade: institutional accounts purchase visibility at the cost of intimacy. </p>
-        <iframe title="Posting Consistency Across Accounts by Follower Count" aria-label="Bar Chart" id="datawrapper-chart-MLQxw"
+    <iframe title="Posting Consistency Across Accounts by Follower Count" aria-label="Bar Chart" id="datawrapper-chart-MLQxw"
             src="https://datawrapper.dwcdn.net/AKAyp/1/" scrolling="no" frameborder="0"
             style="width: 0; min-width: 100% !important; border: none;" height="757" data-external="1"></iframe>
         <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++)if (e[r].contentWindow === a.source) { var i = a.data["datawrapper-height"][t] + "px"; e[r].style.height = i } } })) }();
         </script>
 
-        <p>This distribution proves that large-scale shelters possess the institutional infrastructure, namely dedicated communications staff, recurring marketing budgets, or agency retainers, to sustain content pipelines. For these elite players, the Instagram algorithm acts as a compounding interest machine, rewarding their capital-backed consistency with permanent visibility.</p>
-        <p>The implications of this stratification extend beyond follower counts. In the modern nonprofit economy, Instagram visibility increasingly functions as a proxy for organizational legitimacy: a signal donors, corporate sponsors, and even grant committees use, consciously or not, to gauge whether an organization is "active" and worth funding. For a shelter without a communications budget, this creates a compounding deficit: invisible to donors regardless of the on-the-ground work being done, and less likely to attract the very capital that would let it compete. If digital consistency is effectively a capital expenditure, platforms marketed as free, democratizing tools are, in practice, subsidizing organizations that already have institutional resources. For New York's mid-size and rural shelters, the strategic question isn't simply "post more"; it's whether donor attention should be won on a platform structurally tilted toward scale, or redirected toward funding models less dependent on algorithmic visibility.</p>
+        <p>When mapping institutional follower bases against posting intervals, the data reveals not a smooth gradient but a threshold effect. Organizations below roughly 500 followers post, on median, once every 11 days. That is nearly three times less often than the overall median of 5.13 days. But above that floor, consistency stops scaling with size: accounts in the 1,300 follower range and accounts in the 30,000 follower range post at statistically similar intervals (Pearson r = -0.07 across the full sample). Capital does not appear to buy a steadily improving posting rhythm. It appears to buy an exit from the bottom tier, and nothing more.</p>
+        <iframe
+    class="chart-embed"
+    src="charts/chart1_follower_tier.html"
+    frameborder="0">
+</iframe>
+        <p>This distribution also has a long tail worth sitting with. The median posting interval, 5.1 days, and the mean, 18.2 days, diverge sharply. More than a quarter of accounts in the dataset go three weeks or longer between posts.</p>
 
+
+        <iframe
+    class="chart-embed"
+    src="charts/chart2_distribution.html"
+    frameborder="0">
+</iframe>
+        <p> The pattern holds up geographically, too, and complicates the assumption that bigger audiences come with more disciplined posting. Among the 135 accounts with a confirmed New York business address, upstate shelters carry roughly a third of the median follower count of NYC metro shelters, yet post more frequently: a median of 3.08 days between posts, compared with 4.04 days downstate.</p>
+
+        <iframe
+    class="chart-embed"
+    src="charts/chart3_geography.html"
+    frameborder="0">
+</iframe>
+    <p>Graceland Meadows Animal Rescue and Sanctuary offers a look at what the bottom tier actually looks like up close. It is a registered 501(c)(3) in upstate New York that takes in senior, injured, and surrendered farm animals. Its posting frequency is roughly once every six weeks to its 102 followers, well inside the tier where posting intervals stretch out fastest. Its engagement rate, at 5.96%, is nearly eight times the industry median. The gap is not a failure of strategy. It is what happens when the same small staff runs intake, veterinary coordination, and the Instagram account at once. </p>
+    <p>The implications of this stratification extend beyond follower counts. In the modern nonprofit economy, Instagram visibility increasingly functions as a proxy for organizational legitimacy: a signal donors, corporate sponsors, and even grant committees use, consciously or not, to gauge whether an organization is "active" and worth funding. For a shelter without a communications budget, this creates a compounding deficit. It stays invisible to donors regardless of the on-the-ground work being done, and is less likely to attract the very capital that would let it compete. If digital consistency is effectively a capital expenditure, platforms marketed as free, democratizing tools are, in practice, subsidizing organizations that already have institutional resources. For New York's mid-size and rural shelters, the strategic question isn't simply "post more." It's whether donor attention should be won on a platform structurally tilted toward scale, or redirected toward funding models less dependent on algorithmic visibility.</p>
         
     <footer style="padding: 40px 20px; font-family: inherit; line-height: 1.6;">
     <div style="max-width: 700px; margin: 0 auto; font-size: 14px; color: #555;">
         
         <h4 style="margin-top: 0; color: #222; font-size: 16px;">Methodology & Data Governance</h4>
-        <p>The primary dataset was constructed by scraping public Instagram profile metrics from over 600 animal rescue and shelter accounts across New York State in June/July 2026. Outliers—including private profiles, inactive stubs, and non-local verified entities—were programmatically audited and removed using Python and Pandas to preserve industry baseline integrity.</p>
-        
+        <p>The primary dataset was constructed by scraping public Instagram profile metrics from 570 animal rescue and shelter accounts across New York State in June and July of 2026. Outliers, including private profiles, inactive stubs, and non-local verified entities, were programmatically audited and removed using Python and Pandas to preserve industry baseline integrity. The final analytical sample comprises 394 organizations, after removing accounts with no posts after January 2025 (treated as inactive or incompletely scraped) and accounts confirmed to be non-shelter or non-New York entities. A geographic breakdown, NYC metro versus upstate, was possible for a further subset of 135 accounts with confirmed New York business addresses.</p>
         <h4 style="margin-top: 24px; color: #222; font-size: 16px;">Limitations</h4>
-        <p>This baseline analysis relies purely on public-facing digital output. While the data highlights a clear correlation between high follower counts and posting consistency, it cannot fully quantify the invisible labor of volunteer-run organizations. Future iterations of this project intend to integrate public IRS 990 filings to cross-reference digital workflows directly with annual institutional revenue.</p>
-        <p>The final analytical sample comprises 394 organizations after removing accounts with no posts after January 2025 (treated as inactive or incompletely scraped) and accounts confirmed to be non-shelter or non-New York entities. A geographic breakdown (NYC metro vs. upstate) was possible for a further subset of 135 accounts with confirmed New York business addresses.</p>
-        
+        <p>This baseline analysis relies purely on public-facing digital output. It cannot fully quantify the invisible labor of volunteer-run organizations, and the scraper's structural limit of 12 captured posts per account means posting frequency is measured over a short recent window, not a full account history. During validation, at least one account showed a captured latest post date years out of step with its actual, visibly recent activity, suggesting some scraping gaps that could not be fully distinguished from genuinely inactive accounts. Future iterations of this project intend to integrate public IRS 990 filings to cross-reference digital workflows directly with annual institutional revenue.</p>
+
         <hr style="border: 0; border-top: 1px solid #ddd; margin: 24px 0;">
         
         <p style="font-size: 12px; color: #888; margin-bottom: 0;">
